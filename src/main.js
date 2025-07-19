@@ -47,6 +47,7 @@ showLoader();
   createGallery(data.hits);
   form.reset();
  
+ 
 })
 .catch(error => {
   hideLoader();

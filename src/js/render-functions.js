@@ -15,14 +15,21 @@ let lightbox = new SimpleLightbox('.gallery a', {
 export function createGallery(images) {
   const markup = images
     .map(({ webformatURL, largeImageURL, tags, likes, views, comments, downloads }) => {
-      return `
+      const unwantedTags = ["mackerel", "domestic animal"];
+      const filteredTags = tags
+        .split(',')
+        .map(tag => tag.trim())
+        .filter(tag => !unwantedTags.includes(tag))
+        .slice(0, 3)
+        .join(', ');
+        return `
         <li class="gallery-item">
           <a class="gallery-link" href="${largeImageURL}">
             <img
               class="gallery-image"
               src="${webformatURL}"
-              alt="${tags}"
-              loading="lazy"
+              alt="${filteredTags}"
+             
             />
           </a>
           <div class="image-info">
