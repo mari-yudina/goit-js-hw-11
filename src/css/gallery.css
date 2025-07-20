@@ -15,12 +15,12 @@
   height: 200px;
   object-fit: cover;
   display: block;
-  border: 2px solid #4e75ff;
- border-radius: 5px;
- box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+ 
 } 
 .gallery-item {
- 
+   border: 2px solid #4e75ff;
+ border-radius: 5px;
+ box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
   }
   .image-info {
    
@@ -95,16 +95,17 @@ button:hover{
 
 
 .form{
-   margin: 0 auto; 
+   text-align: center; 
    margin-bottom: 20px;
 }
 
 
 
 .loader {
+  display: block;
 margin: 0 auto;
-        width: 48px;
-        height: 48px;
+        width: 80px;
+        height: 80px;
         border-radius: 50%;
         position: relative;
         animation: rotate 1s linear infinite
@@ -115,13 +116,13 @@ margin: 0 auto;
         position: absolute;
         inset: 0px;
         border-radius: 50%;
-        border: 5px solid #070707;
+        border: 5px solid #3f51b5;
         animation: prixClipFix 2s linear infinite ;
       }
       .loader::after{
         inset: 8px;
         transform: rotate3d(90, 90, 0, 180deg );
-        border-color: #FF3D00;
+        border-color: #4e75ff;
       }
 
       @keyframes rotate {

@@ -21,12 +21,10 @@ form.addEventListener('submit', event => {
       position: 'topCenter',
       timeout: 3000,
     });
-    
-
     input.focus();
     return;
   }
-  
+ clearGallery(); 
 showLoader();
  getImagesByQuery(query)
  .then(data => {
@@ -43,7 +41,7 @@ showLoader();
 
     return; 
   }
-  clearGallery();
+  
   createGallery(data.hits);
   form.reset();
  
